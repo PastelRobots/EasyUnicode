@@ -23,4 +23,6 @@ permissions:
 commands:
   easyunicode:
     description: The main command for the plugin!
+  uc:
+    description: Allows you to run the unicode command!
 

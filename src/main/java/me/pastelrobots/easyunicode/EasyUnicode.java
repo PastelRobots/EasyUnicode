@@ -2,6 +2,7 @@ package me.pastelrobots.easyunicode;
 
 import com.tchristofferson.configupdater.ConfigUpdater;
 import me.pastelrobots.easyunicode.commands.CommandHandler;
+import me.pastelrobots.easyunicode.commands.UCCommand;
 import me.pastelrobots.easyunicode.tabcomplete.TabComplete;
 import org.bukkit.ChatColor;
 import org.bukkit.command.defaults.ReloadCommand;
@@ -34,6 +35,7 @@ public final class EasyUnicode extends JavaPlugin {
 
         Objects.requireNonNull(getCommand("easyunicode")).setExecutor(new CommandHandler());
         Objects.requireNonNull(getCommand("easyunicode")).setTabCompleter(new TabComplete());
+        Objects.requireNonNull(getCommand("uc")).setExecutor(new UCCommand());
 
         plugin.getLogger().info(ChatColor.BLUE + "EasyUnicode has been turned on!");
         plugin.getLogger().info(ChatColor.BLUE + "If you need help or the plugin isn't working as intended, let me know!");
