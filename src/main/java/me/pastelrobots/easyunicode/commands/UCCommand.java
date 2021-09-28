@@ -23,8 +23,7 @@ public class UCCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if(sender instanceof Player p) {
-            if (args.length >= 3) {
-                if (args[0].equals("unicode")) {
+            if (args.length >= 2) {
                     if (p.hasPermission("easyunicode.unicode")) {
                         String letter = args[1].toLowerCase();
 
@@ -57,9 +56,8 @@ public class UCCommand implements CommandExecutor {
                     } else {
                         p.sendMessage(ChatColor.RED + "You do not have permission to run this command!");
                         return true;
-                    }
                 }
-            } else if (args.length == 2) {
+            } else if (args.length == 1) {
                 if (p.hasPermission("easyunicode.unicode")) {
                     String letter = args[1].toLowerCase();
 
