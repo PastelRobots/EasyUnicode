@@ -1,0 +1,26 @@
+name: EasyUnicode
+version: '${project.version}'
+main: me.pastelrobots.easyunicode.EasyUnicode
+api-version: 1.17
+prefix: EasyUnicode
+authors: [ PastelRobots ]
+description: A way to get a unicode character from a letter or number
+
+permissions:
+  easyunicode.reload:
+    description: Allows you to reload the plugin's config
+    default: op
+  easyunicode.unicode:
+    description: Allows you to run the unicode commadn!
+    default: op
+  easyunicode.admin:
+    description: Allows you to run all commands!
+    default: op
+    children:
+      easyunicode.reload: true
+      easyunicode.unicode: true
+
+commands:
+  easyunicode:
+    description: The main command for the plugin!
+
