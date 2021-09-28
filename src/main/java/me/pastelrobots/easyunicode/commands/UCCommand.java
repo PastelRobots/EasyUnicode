@@ -25,9 +25,9 @@ public class UCCommand implements CommandExecutor {
         if(sender instanceof Player p) {
             if (args.length >= 2) {
                     if (p.hasPermission("easyunicode.unicode")) {
-                        String letter = args[1].toLowerCase();
+                        String letter = args[0].toLowerCase();
 
-                        int number = Integer.parseInt(args[2]);
+                        int number = Integer.parseInt(args[1]);
 
                         String url = "https://charbase.com/" + letter;
 
@@ -59,7 +59,7 @@ public class UCCommand implements CommandExecutor {
                 }
             } else if (args.length == 1) {
                 if (p.hasPermission("easyunicode.unicode")) {
-                    String letter = args[1].toLowerCase();
+                    String letter = args[0].toLowerCase();
 
                     String url = "https://charbase.com/" + letter;
 
